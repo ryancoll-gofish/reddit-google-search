@@ -10,10 +10,10 @@ function extractSubreddits() {
       subredditCount[name] = (subredditCount[name] || 0) + 1;
     }
   });
+
+  // Save data to local storage
+  chrome.storage.local.set({ subreddits: subredditCount });
 }
 
 // Run the extraction
 extractSubreddits();
-
-// Send the data to the background script or popup
-chrome.storage.local.set({ subreddits: subredditCount });
