@@ -5,13 +5,8 @@
   "description": "Shows the most common subreddits in Google search results.",
   "permissions": [
     "activeTab",
-    "webRequest",
-    "webRequestBlocking",
-    "*://www.google.com/*"
+    "storage"
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
   "content_scripts": [
     {
       "matches": ["*://www.google.com/search*"],
